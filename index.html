@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="projekat.css">
+	<title>Home</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="stranica">
+<div class="header">
+   
+    <div id="slika1">
+                <img src="logo2.png" id="slika">
+    </div>
+	<p class="hop"><span>MY</span><span id="s">S</span><span>CHOOL</span></p>
+
+
+</div>
+
+    </div>
+    <div class="sidebar">
+        <div class="logo_content">
+          <div class="logo">
+            <div class="logo_name">Welcome!</div>
+          </div>
+          <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav_list">
+          <li>
+             <img src="zvezda.png" id="ikonica" alt="ikona">
+           
+          </li>
+          <li>
+           <a href="index.html">
+            <i class='bx bx-home'></i>
+            <span class="links_name">Home</span>
+           </a>
+           <span class="tooltip">Home</span>
+         </li>
+          <li>
+            <a href="grades.html">
+             <i class='bx bx-medal'></i>
+             <span class="links_name">Grades</span>
+            </a>
+            <span class="tooltip">Grades</span>
+          </li>
+          <li>
+           <a href="exams.html">
+            <i class='bx bx-task'></i>
+            <span class="links_name">Exams</span>
+           </a>
+           <span class="tooltip">Exams</span>
+         </li>
+         <li>
+           <a href="notes.html">
+            <i class='bx bx-note'></i>
+            <span class="links_name">Notes</span>
+           </a>
+           <span class="tooltip">Notes</span>
+         </li>
+         <li>
+           <a href="timetable.html">
+            <i class='bx bx-calendar'></i>
+            <span class="links_name">Timetable</span>
+           </a>
+           <span class="tooltip">Timetable</span>
+         </li>
+         <li>
+			<a href="documents.php">
+			 <i class='bx bx-file'></i>
+			 <span class="links_name">My Documents</span>
+			</a>
+			<span class="tooltip">My Documents</span>
+		  </li>
+         
+        </ul>
+      
+          <div class="user">
+           
+           
+          </div>
+        </div>
+     
+      <div class="home_content">
+            <div class="dashboard-content">
+        
+        <div class="content">
+            <div class="slides">
+              <div class="slide_content 1">
+                <blockquote>
+                <h1 id="h1" class="show">"Having knowledge but lacking the power to<br> express it clearly is no better than never having<br>any ideas at all."</h1>
+                <cite>Leonardo <span class="cite-last-name">da Vinci</span></cite>
+                <img src="mozak.jpg" class="blockquote-author-image">
+            </blockquote>
+              </div>
+              <div class="slide_content 2">
+				<blockquote>
+					
+                <h1 id="h2"class="show">"The most difficult thing is the<br> decision to act, the rest is<br>merely tenacity."</h1>
+                <cite>Amelia <span class="cite-last-name">Earhart</span></cite>
+                <img src="mozak2.jpg" class="blockquote-author-image">
+            </blockquote>
+				
+              </div>
+              <div class="slide_content 3">
+                <blockquote>
+					
+					<h1 id="h3"class="show">"The beautiful thing about learning is<br> that no one can take it away<br> from you."</h1>
+					<cite>B.B. <span class="cite-last-name">King</span></cite>
+					<img src="mozak3..jpg" class="blockquote-author-image">
+				</blockquote>
+              </div>
+              <div class="slide_content 4">
+                <blockquote>
+					
+					<h1 id="h3"class="show">"A person who never made<br> a mistake never tried<br>anything new."</h1>
+					<cite>Albert <span class="cite-last-name">Einstein</span></cite>
+					<img src="einstein.jpg" class="blockquote-author-image">
+				</blockquote>
+              </div>
+            </div>
+          </div>
+          <div class="text" id="prvidio">
+            <div>
+              <br>
+              <span id="skola">School:</span>
+              <select name="skole" id="skole">
+                  <option value="srednja_elektrotehnicka">High School of Electrical Engineering</option>
+                  <option value="gimnazija_obala">Gymnasium Sarayevo</option>
+                  <option value="opel">Musical Academy Sarayevo</option>
+                  <option value="audi">Graphic Design and Multimedial High School</option>
+                </select>
+            </div>
+            <div>
+      
+              <br>
+              <span id="razred">Class:</span>
+              <select name="razredi" id="razredi">
+                  <option value="peti">Razred</option>
+                  <option value="prvi">I</option>
+                  <option value="drugi">II</option>
+                  <option value="treci">III</option>
+                  <option value="cetvrti">IV</option>
+                </select>
+            </div>
+      
+              </div>
+              <br>
+			  <br>
+			      <div class="subjects">
+                     <p id="subjects">Subjects:</p>
+					 <p id="odaberi">(Choose a class)</p>
+
+
+				  </div>
+              
+              
+              <div class="smjerovi">
+                         <div id="RIS">
+                                
+                                 <img src="ikona_ri.png" alt="ikonari" id="ikonari">
+                                 <span id="ri">Računarstvo i informatika</span>
+                                
+                         </div>
+                         <div id="TKS">
+                         
+                          <img src="ikona_tk.png" alt="ikonatk" id="ikonatk">
+                          <span id="tk">Telekomunikacije</span>
+                         </div>
+                         <div id="ATS">
+                          
+                                <img src="ikona_at.png" alt="ikonaat" id="ikonaat">
+                                <span id="at">Automatika</span>
+                         </div>
+
+
+
+              </div>
+              <div id="Showprvi" class="myDiv">
+                <br>
+                <br>
+                 <table id="prvatabela">
+	<thead>
+		<tr>
+			<td>Number</td>
+			<td>Subject name</td>
+			<td>Times a week</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bosanski,  hrvatski, srpski jezik i književnost</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Engleski jezik</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Sport</td>
+			<td>2</td>
+		</tr>
+    <tr>
+			<td>4</td>
+			<td>History</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>5</td>
+			<td>Informatika</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>6</td>
+			<td>Matematika
+      </td>
+			<td>4</td>
+		</tr>
+     <tr>
+			<td>7</td>
+			<td>Fizika</td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>8</td>
+			<td>Hemija sa tehnologijom materijala</td>
+			<td>2</td>
+     </tr>
+       <tr>
+			<td>9</td>
+			<td>Osnove elektrotehnike</td>
+			<td>4</td>
+		</tr>
+		 <tr>
+			<td>10</td>
+			<td>Tehničko crtanje</td>
+			<td>2</td>
+
+		</tr>
+     <tr>
+			<td>11</td>
+			<td>Osnove elektroenergetike</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>12</td>
+			<td>Laboratorijski rad</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>13</td>
+			<td>Vjeronauka/DKR</td>
+			<td>1</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+                <br>
+                 <table id="drugatabela">
+	<thead>
+		<tr>
+			<td>Number</td>
+			<td>Subject name</td>
+			<td>Times a week</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bosanski,  hrvatski, srpski jezik i književnost</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Engleski jezik</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Sport</td>
+			<td>2</td>
+		</tr>
+    <tr>
+			<td>4</td>
+			<td>History</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>5</td>
+			<td>Informatika</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>6</td>
+			<td>Matematika
+      </td>
+			<td>4</td>
+		</tr>
+     <tr>
+			<td>7</td>
+			<td>Fizika</td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>8</td>
+			<td>Hemija sa tehnologijom materijala</td>
+			<td>2</td>
+     </tr>
+       <tr>
+			<td>9</td>
+			<td>Osnove elektrotehnike</td>
+			<td>4</td>
+		</tr>
+		 <tr>
+			<td>10</td>
+			<td>Tehničko crtanje</td>
+			<td>2</td>
+
+		</tr>
+     <tr>
+			<td>11</td>
+			<td>Osnove elektroenergetike</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>12</td>
+			<td>Laboratorijski rad</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>13</td>
+			<td>Vjeronauka/DKR</td>
+			<td>1</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+                <br>
+                 <table id="trecatabela">
+	<thead>
+		<tr>
+			<td>Number</td>
+			<td>Subject name</td>
+			<td>Times a week</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bosanski,  hrvatski, srpski jezik i književnost</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Engleski jezik</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Sport</td>
+			<td>2</td>
+		</tr>
+    <tr>
+			<td>4</td>
+			<td>History</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>5</td>
+			<td>Informatika</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>6</td>
+			<td>Matematika
+      </td>
+			<td>4</td>
+		</tr>
+     <tr>
+			<td>7</td>
+			<td>Fizika</td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>8</td>
+			<td>Hemija sa tehnologijom materijala</td>
+			<td>2</td>
+     </tr>
+       <tr>
+			<td>9</td>
+			<td>Osnove elektrotehnike</td>
+			<td>4</td>
+		</tr>
+		 <tr>
+			<td>10</td>
+			<td>Tehničko crtanje</td>
+			<td>2</td>
+
+		</tr>
+     <tr>
+			<td>11</td>
+			<td>Osnove elektroenergetike</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>12</td>
+			<td>Laboratorijski rad</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>13</td>
+			<td>Vjeronauka/DKR</td>
+			<td>1</td>
+		</tr>
+	</tbody>
+</table>
+              </div>
+              <div id="Showdrugi" class="myDiv">
+                <br>
+                <br>
+                 <table id="prvatabela_2">
+	<thead>
+		<tr>
+			<td>Number</td>
+			<td>Subject name</td>
+			<td>Times a week</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bosanski,  hrvatski, srpski jezik i književnost</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Engleski jezik</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Sport</td>
+			<td>2</td>
+		</tr>
+    <tr>
+			<td>4</td>
+			<td>Informatika</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>5</td>
+			<td>Elekktronika</td>
+			<td>4</td>
+		</tr>
+     <tr>
+			<td>6</td>
+			<td>Matematika
+      </td>
+			<td>4</td>
+		</tr>
+     <tr>
+			<td>7</td>
+			<td>Fizika</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>8</td>
+			<td>Električna mjerenja</td>
+			<td>2</td>
+     </tr>
+       <tr>
+			<td>9</td>
+			<td>Osnove elektrotehnike</td>
+			<td>4</td>
+		</tr>
+		 <tr>
+			<td>10</td>
+			<td>Osnove komunikacija</td>
+			<td>2</td>
+
+		</tr>
+     <tr>
+			<td>11</td>
+			<td>Laboratorijski rad</td>
+			<td>4</td>
+		</tr>
+     <tr>
+			<td>12</td>
+			<td>Vjeronauka</td>
+			<td>1</td>
+		</tr>
+     <tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<br>
+                <br>
+                 <table id="drugatabela_2">
+                  <thead>
+                    <tr>
+                      <td>Number</td>
+                      <td>Subject name</td>
+                      <td>Times a week</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Bosanski,  hrvatski, srpski jezik i književnost</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Engleski jezik</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Sport</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Informatika</td>
+                      <td>2</td>
+                    </tr>
+                     <tr>
+                      <td>5</td>
+                      <td>Elekktronika</td>
+                      <td>4</td>
+                    </tr>
+                     <tr>
+                      <td>6</td>
+                      <td>Matematika
+                      </td>
+                      <td>4</td>
+                    </tr>
+                     <tr>
+                      <td>7</td>
+                      <td>Fizika</td>
+                      <td>2</td>
+                    </tr>
+                     <tr>
+                      <td>8</td>
+                      <td>Električna mjerenja</td>
+                      <td>2</td>
+                     </tr>
+                       <tr>
+                      <td>9</td>
+                      <td>Osnove elektrotehnike</td>
+                      <td>4</td>
+                    </tr>
+                     <tr>
+                      <td>10</td>
+                      <td>Osnove komunikacija</td>
+                      <td>2</td>
+                
+                    </tr>
+                     <tr>
+                      <td>11</td>
+                      <td>Laboratorijski rad</td>
+                      <td>4</td>
+                    </tr>
+                     <tr>
+                      <td>12</td>
+                      <td>Vjeronauka</td>
+                      <td>1</td>
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                                <br>
+                 <table id="trecatabela_2">
+                  <thead>
+                    <tr>
+                      <td>Number</td>
+                      <td>Subject name</td>
+                      <td>Times a week</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Bosanski,  hrvatski, srpski jezik i književnost</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Engleski jezik</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Sport</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Informatika</td>
+                      <td>2</td>
+                    </tr>
+                     <tr>
+                      <td>5</td>
+                      <td>Elekktronika</td>
+                      <td>4</td>
+                    </tr>
+                     <tr>
+                      <td>6</td>
+                      <td>Matematika
+                      </td>
+                      <td>4</td>
+                    </tr>
+                     <tr>
+                      <td>7</td>
+                      <td>Fizika</td>
+                      <td>2</td>
+                    </tr>
+                     <tr>
+                      <td>8</td>
+                      <td>Električna mjerenja</td>
+                      <td>2</td>
+                     </tr>
+                       <tr>
+                      <td>9</td>
+                      <td>Osnove elektrotehnike</td>
+                      <td>4</td>
+                    </tr>
+                     <tr>
+                      <td>10</td>
+                      <td>Osnove komunikacija</td>
+                      <td>2</td>
+                
+                    </tr>
+                     <tr>
+                      <td>11</td>
+                      <td>Laboratorijski rad</td>
+                      <td>4</td>
+                    </tr>
+                     <tr>
+                      <td>12</td>
+                      <td>Vjeronauka</td>
+                      <td>1</td>
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                                <br>
+              </div>
+              
+              <div id="Showtreci" class="myDiv">
+                <br>
+                <br>
+                 <table id="prvatabela_3">
+	<thead>
+		<tr>
+			<td>Number</td>
+			<td>Subject name</td>
+			<td>Times a week</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bosanski,  hrvatski, srpski jezik i književnost</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Engleski jezik</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Sport</td>
+			<td>2</td>
+		</tr>
+    <tr>
+			<td>4</td>
+			<td>Demokratija</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>5</td>
+			<td>Matematika</td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>6</td>
+			<td>Elektronika 
+      </td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>7</td>
+			<td>Računarstvo</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>8</td>
+			<td>Impulsna i digitalna elektronika</td>
+			<td>3</td>
+     </tr>
+       <tr>
+			<td>9</td>
+			<td>Električna kola</td>
+			<td>2</td>
+		</tr>
+		 <tr>
+			<td>10</td>
+			<td>Programiranje i programski jezici</td>
+			<td>2</td>
+
+		</tr>
+     <tr>
+			<td>11</td>
+			<td>Operativni sistemi</td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>12</td>
+			<td>Laboratorijski rad</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>13</td>
+			<td>Vjeronauka/DKR</td>
+			<td>1</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+                <br>
+                 <table id="drugatabela_3">
+	<thead>
+		<tr>
+			<td>Number</td>
+			<td>Subject name</td>
+			<td>Times a week</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bosanski,  hrvatski, srpski jezik i književnost</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Engleski jezik</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Sport</td>
+			<td>2</td>
+		</tr>
+    <tr>
+			<td>4</td>
+			<td>Demokratija</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>5</td>
+			<td>Matematika</td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>6</td>
+			<td>Elektronika
+      </td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>7</td>
+			<td>Računarstvo</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>8</td>
+			<td>Impulsna i digitalna elektronika</td>
+			<td>3</td>
+     </tr>
+       <tr>
+			<td>9</td>
+			<td>Laboratorijski rad</td>
+			<td>4</td>
+		</tr>
+		 <tr>
+			<td>10</td>
+			<td>Električna kola</td>
+			<td>2</td>
+
+		</tr>
+     <tr>
+			<td>11</td>
+			<td>Tehnika telekomunikacija</td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>12</td>
+			<td>Komutacioni sistemi</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>13</td>
+			<td>Vjeronauka/DKR</td>
+			<td>1</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+                <br>
+                 <table id="trecatabela_3">
+	<thead>
+		<tr>
+			<td>Number</td>
+			<td>Subject name</td>
+			<td>Times a week</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bosanski,  hrvatski, srpski jezik i književnost</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Engleski jezik</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Sport</td>
+			<td>2</td>
+		</tr>
+    <tr>
+			<td>4</td>
+			<td>Demokratija</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>5</td>
+			<td>Elektronika</td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>6</td>
+			<td>Matematika
+      </td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>7</td>
+			<td>Računarstvo</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>8</td>
+			<td>Impulsna i digitalna elektronika</td>
+			<td>3</td>
+     </tr>
+       <tr>
+			<td>9</td>
+			<td>Električna kola</td>
+			<td>2</td>
+		</tr>
+		 <tr>
+			<td>10</td>
+			<td>Energetska elektronika</td>
+			<td>2</td>
+
+		</tr>
+     <tr>
+			<td>11</td>
+			<td>Osnovi automatike</td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>12</td>
+			<td>Laboratorijski rad</td>
+			<td>4</td>
+		</tr>
+     <tr>
+			<td>13</td>
+			<td>Vjeronauka/DKR</td>
+			<td>1</td>
+		</tr>
+	</tbody>
+</table>
+              </div>
+              <div id="Showcetvrti" class="myDiv">
+                <br>
+                <br>
+                 <table id="prvatabela_4">
+	<thead>
+		<tr>
+			<td>Number</td>
+			<td>Subject name</td>
+			<td>Times a week</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bosanski,  hrvatski, srpski jezik i književnost</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Engleski jezik</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Sport</td>
+			<td>2</td>
+		</tr>
+    <tr>
+			<td>4</td>
+			<td>Sociologija</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>5</td>
+			<td>Elektronska mjerenja</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>6</td>
+			<td>Matematika
+      </td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>7</td>
+			<td>Električna kola</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>8</td>
+			<td>Programiranje i programski jezici</td>
+			<td>3</td>
+     </tr>
+       <tr>
+			<td>9</td>
+			<td>Relacione baze podataka</td>
+			<td>2</td>
+		</tr>
+		 <tr>
+			<td>10</td>
+			<td>Računarske mreže</td>
+			<td>3</td>
+
+		</tr>
+     <tr>
+			<td>11</td>
+			<td>Digitalne računarske mašine</td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>12</td>
+			<td>Laboratorijski rad</td>
+			<td>4</td>
+		</tr>
+     <tr>
+			<td>13</td>
+			<td>Vjeronauka/DKR</td>
+			<td>1</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+                <br>
+                 <table id="drugatabela_4">
+	<thead>
+		<tr>
+			<td>Number</td>
+			<td>Subject name</td>
+			<td>Times a week</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bosanski,  hrvatski, srpski jezik i književnost</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Engleski jezik</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Sport</td>
+			<td>2</td>
+		</tr>
+    <tr>
+			<td>4</td>
+			<td>Sociologija</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>5</td>
+			<td>Elektronska mjerenja</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>6</td>
+			<td>Matematika
+      </td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>7</td>
+			<td>Računarstvo</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>8</td>
+			<td>Električna kola</td>
+			<td>2</td>
+     </tr>
+       <tr>
+			<td>9</td>
+			<td>Pristupne mreže</td>
+			<td>3</td>
+		</tr>
+		 <tr>
+			<td>10</td>
+			<td>Mobilne komunikacije</td>
+			<td>3</td>
+
+		</tr>
+     <tr>
+			<td>11</td>
+			<td>Digitalne telekomunikacije</td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>12</td>
+			<td>Laboratorijski rad</td>
+			<td>4</td>
+		</tr>
+     <tr>
+			<td>13</td>
+			<td>Vjeronauka/DKR</td>
+			<td>1</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+                <br>
+                 <table id="trecatabela_4">
+	<thead>
+		<tr>
+			<td>Number</td>
+			<td>Subject name</td>
+			<td>Times a week</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bosanski,  hrvatski, srpski jezik i književnost</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Engleski jezik</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Sport</td>
+			<td>2</td>
+		</tr>
+    <tr>
+			<td>4</td>
+			<td>Sociologija</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>5</td>
+			<td>Elektronska mjerenja</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>6</td>
+			<td>Matematika
+      </td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>7</td>
+			<td>Električna kola</td>
+			<td>2</td>
+		</tr>
+     <tr>
+			<td>8</td>
+			<td>Mikroelektronika</td>
+			<td>2</td>
+     </tr>
+       <tr>
+			<td>9</td>
+			<td>Programabilni sistemi</td>
+			<td>3</td>
+		</tr>
+		 <tr>
+			<td>10</td>
+			<td>Automatika</td>
+			<td>3</td>
+
+		</tr>
+     <tr>
+			<td>11</td>
+			<td>Tehnička sredstva automatike</td>
+			<td>3</td>
+		</tr>
+     <tr>
+			<td>12</td>
+			<td>Laboratorijski rad</td>
+			<td>4</td>
+		</tr>
+     <tr>
+			<td>13</td>
+			<td>Vjeronauka/DKR</td>
+			<td>1</td>
+		</tr>
+	</tbody>
+</table>
+              </div>
+			 
+			  <div id="Showpeti" >
+                <br>
+                <br>
+                 <table id="prvatabela_5">
+	<thead>
+		<tr>
+			<td>Number</td>
+			<td>Subject name</td>
+			<td>Times a week</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+    <tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+     <tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+     <tr>
+			<td></td>
+			<td>
+      </td>
+			<td></td>
+		</tr>
+     <tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+     <tr>
+			<td></td>
+			<td></td>
+			<td></td>
+     </tr>
+       <tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		 <tr>
+			<td></td>
+			<td></td>
+			<td></td>
+
+		</tr>
+     <tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+     <tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+     <tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<br>
+                <br>
+                 <table id="drugatabela_5">
+                  <thead>
+                    <tr>
+						<td>Number</td>
+						<td>Subject name</td>
+						<td>Times a week</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td>
+                      </td>
+                      <td></td>
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                     </tr>
+                       <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                                <br>
+                 <table id="trecatabela_5">
+                  <thead>
+                    <tr>
+						<td>Number</td>
+						<td>Subject name</td>
+						<td>Times a week</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td>
+                      </td>
+                      <td></td>
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                     </tr>
+                       <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                     <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                                <br>
+              </div>
+              
+			</div>
+	
+			
+
+              </div>
+              
+   <script src="main.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>      
+
+<script>
+$(document).ready(function(){
+	$("div.myDiv").hide();
+    $('#razredi').on('change', function(){
+    	var demovalue = $(this).val(); 
+        $("div.myDiv").hide();
+		$("#Showpeti").hide();
+        $("#Show"+demovalue).show();
+    });
+});
+</script> 
+
+
+
+
+
+
+</body>
+</html>

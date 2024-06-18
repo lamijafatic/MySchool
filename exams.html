@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="exams.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stranica">
+        <div class="header">
+           
+            <div id="slika1">
+                        <img src="logo2.png" id="slika">
+            </div>
+            <p class="hop"><span>MY</span><span id="s">S</span><span>CHOOL</span></p>
+       
+        
+        </div>
+        
+            </div>
+            <div class="sidebar">
+                <div class="logo_content">
+                  <div class="logo">
+                    <div class="logo_name">Welcome!</div>
+                  </div>
+                  <i class='bx bx-menu' id="btn"></i>
+                </div>
+                <ul class="nav_list">
+                  <li>
+                    <img src="zvezda.png" id="ikonica" alt="ikona">
+                  </li>
+                  <li>
+                   <a href="index.html">
+                    <i class='bx bx-home'></i>
+                    <span class="links_name">Home</span>
+                   </a>
+                   <span class="tooltip">Home</span>
+                 </li>
+                  <li>
+                    <a href="grades.html">
+                     <i class='bx bx-medal'></i>
+                     <span class="links_name">Grades</span>
+                    </a>
+                    <span class="tooltip">Grades</span>
+                  </li>
+                  <li>
+                   <a href="exams.html">
+                    <i class='bx bx-task'></i>
+                    <span class="links_name">Exams</span>
+                   </a>
+                   <span class="tooltip">Exams</span>
+                 </li>
+                 <li>
+                   <a href="notes.html">
+                    <i class='bx bx-note'></i>
+                    <span class="links_name">Notes</span>
+                   </a>
+                   <span class="tooltip">Notes</span>
+                 </li>
+                 <li>
+                   <a href="timetable.html">
+                    <i class='bx bx-calendar'></i>
+                    <span class="links_name">Timetable</span>
+                   </a>
+                   <span class="tooltip">Timetable</span>
+                 </li>
+                  <li>
+			<a href="documents.php">
+			 <i class='bx bx-file'></i>
+			 <span class="links_name">My Documents</span>
+			</a>
+			<span class="tooltip">My Documents</span>
+		  </li>
+                 
+                </ul>
+              
+                  <div class="user">
+                   
+                   
+                  </div>
+                </div>
+
+                <div class="exams_stranica">
+                    <div class="naslovv">
+                        <span id="my">My</span><span id="notesid">Exams</span>
+                      </div>
+                      <br>
+                      <span id="clicking">Add your upcoming exam by clicking on the certain date</span>
+                      <br>
+                      <br>
+                    <div class="kalendar">
+                        <div id="calPeriod">
+                            <select id="calMonth"></select>
+                            <input type="number" id="calYear">
+                          </div>
+                      
+                          <!-- (B) CALENDAR -->
+                          <div id="calWrap"></div>
+                      
+                          <!-- (C) EVENT FORM -->
+                          <dialog id="calForm"><form method="dialog">
+                            <div id="evtClose">X</div>
+                            <h2>New Exam</h2>
+                            <label>Date</label>
+                            <input type="text" id="evtDate" readonly>
+                            <label>Details</label>
+                            <textarea id="evtTxt" required></textarea>
+                      
+                            <input id="evtDel" type="button" value="Delete">
+                            <input id="evtSave" type="submit" value="Save">
+                          </form></dialog>
+
+                    </div>
+
+
+                </div>
+                </body>
+                <script src="kalendar.js"></script>
+</html>

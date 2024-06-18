@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Live search</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+
+		input[type="text"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 50%;
+			margin: 20px auto;
+			display: block;
+		}
+
+		b {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Live search</h1>
+	</header>
+	
+	<input type="text" id="search-bar" placeholder="Pretraži na web stranici...">
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.</p>
+
+	<p>Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.</p>
+<script>
+	let searchBar = document.getElementById('search-bar');
+
+searchBar.addEventListener('keyup', function() {
+  let searchValue = searchBar.value.toLowerCase();
+  let paragraphs = document.getElementsByTagName('p');
+
+  for (let i = 0; i < paragraphs.length; i++) {
+    let paragraphText = paragraphs[i].innerText.toLowerCase();
+
+    if (paragraphText.includes(searchValue)) {
+      let paragraphHtml = paragraphs[i].innerHTML;
+      let highlightedHtml = paragraphHtml.replaceAll(searchValue, "<b>" + searchValue + "</b>");
+      paragraphs[i].innerHTML = highlightedHtml;
+    } else {
+      paragraphs[i].innerHTML = paragraphs[i].innerText;
+    }
+  }
+});
+</script>
+</body>
+</html>

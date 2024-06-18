@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pop-up prozor</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+  </head>
+  <body>
+    <button id="myBtn">Otvori pop-up prozor</button>
+
+    <div id="myModal" style="display:none" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Unesite riječi u tekstualna polja:</h2>
+        <input type="text" id="word1" placeholder="Riječ 1" class="popup-input" ><br>
+        <input type="text" id="word2" placeholder="Riječ 2"class="popup-input"><br>
+        <input type="text" id="word3" placeholder="Riječ 3" class="popup-input"><br>
+        <input type="text" id="word4" placeholder="Riječ 4" class="popup-input"><br>
+        <input type="text" id="word5" placeholder="Riječ 5" class="popup-input"><br>
+        <input type="text" id="word6" placeholder="Riječ 6" class="popup-input"><br>
+        <input type="text" id="word7" placeholder="Riječ 7" class="popup-input"><br>
+        <input type="text" id="word8" placeholder="Riječ 8" class="popup-input"><br>
+        <input type="text" id="word9" placeholder="Riječ 9" class="popup-input"><br>
+        <input type="text" id="word10" placeholder="Riječ 10" class="popup-input"><br>
+        <input type="text" id="word11" placeholder="Riječ 11" class="popup-input"><br>
+        <input type="text" id="word12" placeholder="Riječ 12" class="popup-input"><br>
+        <input type="text" id="word13" placeholder="Riječ 13" class="popup-input"><br>
+        <button id="saveBtn">Spremi</button>
+      </div>
+    </div>
+
+    <div class="text-frames">
+      <div id="frame1" class="text-frame" class="output"></div>
+      <div id="frame2" class="text-frame" class="output"></div>
+      <div id="frame3" class="text-frame" class="output"></div>
+      <div id="frame4" class="text-frame" class="output"></div>
+      <div id="frame5" class="text-frame" class="output"></div>
+      <div id="frame6" class="text-frame" class="output"></div>
+      <div id="frame7" class="text-frame" class="output"></div>
+      <div id="frame8" class="text-frame" class="output"></div>
+      <div id="frame9" class="text-frame" class="output"></div>
+      <div id="frame10" class="text-frame" class="output"></div>
+      <div id="frame11" class="text-frame" class="output"></div>
+      <div id="frame12" class="text-frame" class="output"></div>
+      <div id="frame13" class="text-frame" class="output"></div>
+    </div>
+
+    <script>
+        const popup = document.getElementById('myModal');
+const openPopupBtn = document.getElementById('myBtn');
+const savePopupBtn = document.getElementById('saveBtn');
+const inputElements = document.querySelectorAll('.popup-input');
+const outputElements = document.querySelectorAll('.text-frame');
+
+// Funkcija za otvaranje popup-a
+function openPopup() {
+  popup.style.display = 'block';
+}
+
+// Funkcija za spremanje unosa i zatvaranje popup-a
+function savePopup() {
+  for (let i = 0; i < inputElements.length; i++) {
+    const input = inputElements[i];
+    const output = outputElements[i];
+    output.innerText = input.value;
+    input.value = '';
+  }
+  popup.style.display = 'none';
+}
+
+// Povezivanje event listenera na gumb za otvaranje popup-a
+openPopupBtn.addEventListener('click', openPopup);
+
+// Povezivanje event listenera na gumb za spremanje unosa
+savePopupBtn.addEventListener('click', savePopup);
+    </script>
+  </body>
+</html>

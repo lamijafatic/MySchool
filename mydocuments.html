@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Upload dokumenta</title>
+  </head>
+  <body>
+    <h1>Upload dokumenta</h1>
+    <form>
+      <input type="file" id="dokument" name="dokument">
+      <br><br>
+      <button type="button" onclick="upload()">Upload</button>
+    </form>
+    <br><br>
+    <h2>Uploadovani dokumenti:</h2>
+    <ul id="lista-dokumenata">
+    </ul>
+    <script>
+      // dohvatiti spremljenu listu dokumenata iz Local Storage-a
+      const listaDokumenata = JSON.parse(localStorage.getItem('listaDokumenata')) || [];
+
+      // prikazati sve uploadovane dokumente
+      listaDokumenata.forEach(dokument => {
+        const link = document.createElement('a');
+        link.href = '#';
+        link.innerHTML = dokument.naziv;
+        link.onclick = function() {
+          const reader = new FileReader();
+          reader.onload = function(event) {
+            const fileUrl = event.target.result;
+            const win = window.open(fileUrl, '_blank');
+            win.focus();
+          };
+          reader.readAsDataURL(dokument.file);
+          return false;
+        };
+        const listItem = document.createElement('li');
+        listItem.appendChild(link);
+        document.getElementById('lista-dokumenata').appendChild(listItem);
+      });
+
+      function upload() {
+        const input = document.getElementById('dokument');
+        const file = input.files[0];
+        const fileName = file.name;
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          const fileUrl = event.target.result;
+          const link = document.createElement('a');
+          link.href = '#';
+          link.innerHTML = fileName;
+          link.onclick = function() {
+            const win = window.open(fileUrl, '_blank');
+            win.focus();
+            return false;
+          };
+          const listItem = document.createElement('li');
+          listItem.appendChild(link);
+          document.getElementById('lista-dokumenata').appendChild(listItem);
+
+          // spremiti novi dokument u Local Storage
+          const noviDokument = {
+            naziv: fileName,
+            file: file
+          };
+          listaDokumenata.push(noviDokument);
+          localStorage.setItem('listaDokumenata', JSON.stringify(listaDokumenata));
+        };
+        reader.readAsDataURL(file);
+      }
+    </script>
+  </body>
+</html>

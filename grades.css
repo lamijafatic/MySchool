@@ -1,0 +1,752 @@
+.header
+{   display:grid;
+    height:160px;
+    width: 100%;
+    grid-template:
+    "prazno slika naslov praznok praznog"
+    "prazno slika naslov praznok logout" ;
+    grid-template-columns:100px 210px 1fr 150px 200px ;
+    grid-template-rows:65px 65px;
+    background-color:white;
+}
+#logopocetni{
+    
+    width:100vw;
+    height: 130px;
+
+    
+}
+#slika{
+   width:170px;
+   height:130px;
+   grid-area:slika;
+   
+  
+    
+}
+#slika1{
+    grid-area:slika;
+}
+#naslov{
+    grid-area:naslov;
+    text-align: center;
+    align-self: center;
+    font-size: 60px;
+    text-shadow: 0 0 4px black;
+   
+    font-weight: bold;
+    color:red;
+    font-family:"Lucida Handwriting";
+    
+
+}
+.row{
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+}
+.columns{
+  
+}
+.unos_ocjena{
+  flex-grow: 1;
+  text-align:left;
+}
+.prosjek{
+  flex-grow:1;
+  display:flex;
+  text-align: left;
+  margin-top:60px;
+}
+.svi_prosjeci{
+  flex-grow:1;
+}
+.uspjeh{
+  flex-grow: 1;
+}
+#avg_grades,#avg_grades2,#avg_grades1,#avg_grades3,#avg_grades4,#avg_grades5,#avg_grades6,#avg_grades7,#avg_grades8,#avg_grades9,#avg_grades10,#avg_grades11,#avg_grades12,#avg_grades13,#avg_grades14 { 
+ 
+  margin-bottom: 5px;
+  font-weight: bold;
+  height:35px;
+  font-family:cursive;
+  font-size: 25px;
+ font-weight:bold;
+
+   
+ }
+ .ocjene_stranica{
+ height:auto;
+ background-image:url("pozadina_ocjene.jpg");
+ background-size:contain;
+ background-repeat:no-repeat;
+ background-position: right;
+ 
+ 
+ }
+ #final_grade,#final_grade1,#final_grade2,#final_grade3,#final_grade4,#final_grade5,#final_grade6,#final_grade7,#final_grade8,#final_grade9,#final_grade10,#final_grade11,#final_grade12,#final_grade13,#final_grade14 { 
+  font-weight: bold;
+  font-size: 25px;
+  font-family: cursive;
+  margin-bottom: 5px;
+  text-align:center;
+  height:35px; 
+ }
+.green { 
+  color: green;
+}
+.teal { color: teal; }
+.blue { color: blue; }
+.orange { color: orange; }
+.red { color: red; }
+.directions { display: block; margin-bottom: 10px; font-size: 80%; }
+.wrapper { width: 50%; min-width: 300px; background: #eee; text-align: center; padding: 20px; margin: 0 auto; box-shadow: 0 1px 1px rgba(0,0,0,0.15), 0 10px 0 -5px #eee, 0 10px 1px -4px rgba(0,0,0,0.15), 0 20px 0 -10px #eee, 0 20px 1px -9px rgba(0,0,0,0.15); }
+#logout{
+    grid-area: logout;
+    text-decoration:none;
+    color:black;
+    font-size :20px;
+}
+
+.ocjene_po{
+  height:35px;
+    width:320px;
+    display:block;
+    margin-bottom: 5px;
+  
+    text-align:center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*font-family: "Poppins" , sans-serif;*/
+}
+:root{
+    --black-color:#11101d;
+    --white-color:#fff;
+    --sky-color:#E4E9F7;
+    --light-black:#1d1b31;
+}
+body{
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: auto;
+}
+::selection{
+  color:var(--white-color);
+  background: var(--black-color);
+} 
+#dugme_pakleno{
+  width:320px;
+  height: 35px;
+  margin-bottom: 5px;
+  text-align:center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #ff0a0a;
+}
+.sidebar{
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:78px;
+  background:var(--black-color);
+  padding:6px 14px;
+  z-index:99;
+  transition:all 0.5s ease;
+}
+.sidebar.active{
+  width:240px;
+}
+.sidebar .logo_content .logo{
+  color:var(--white-color);
+  display: flex;
+  height:50px;
+  width:100%;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition:all 0.5s ease;
+}
+.sidebar.active .logo_content .logo{
+  opacity:1;
+  pointer-events: none;
+}
+.logo_content .logo .logo_name{
+  font-size: 20px;
+  font-weight: 400;
+}
+.sidebar #btn{
+  position:absolute;
+  color:var(--white-color);
+  top:6px;
+  left:50%;
+  font-size: 22px;
+  height:50px;
+  width:50px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+.sidebar.active #btn{
+  left:90%;
+}
+.sidebar ul{
+  margin-top:20px;
+}
+.sidebar ul li{
+  position:relative;
+  height:50px;
+  width:100%;
+  margin:5px 0;
+  list-style: none;
+  line-height: 50px;
+}
+.sidebar ul li .tooltip{
+  position:absolute;
+  left:125px;
+  top:0;
+  transform:translate(-50%, -50%);
+  border-radius: 6px;
+  height:35px;
+  width:120px;
+  background: var(--white-color);
+  line-height: 35px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition:0s;
+  opacity:0;
+  pointer-events: none;
+  display:block;
+}
+.sidebar ul li .tooltip::before{
+  content:'';
+  width:0;
+  height:0;
+  border-top:10px solid transparent;
+  border-bottom:10px solid transparent;
+  border-right:10px solid var(--white-color);
+  position:absolute;
+  left:-8px;
+  top:7px;
+}
+.sidebar.active ul li .tooltip{
+  display:none;
+}
+.sidebar ul li:hover .tooltip{
+  transition:all 0.5s ease;
+  opacity:1;
+  top:50%;
+}
+.sidebar ul li input{
+  position:absolute;
+  height:100%;
+  width:100%;
+  left:0;
+  top:0;
+  border-radius: 12px;
+  outline:none;
+  border:none;
+  background: #1d1b31;
+  padding-left:50px;
+  font-size: 18px;
+  color:var(--white-color);
+}
+.sidebar ul  .bx-search{
+  position:relative;
+  z-index: 99;
+  color:var(--white-color);
+  font-size: 22px;
+  transition:all 0.5s ease;
+}
+.sidebar ul li .bx-search:hover{
+  background:var(--white-color);
+  color:#1d1b31;
+}
+.sidebar ul li a{
+  color:var(--white-color);
+  display:flex;
+  align-items:center;
+  text-decoration: none;
+  border-radius: 12px;
+  white-space: nowrap;
+  transition:all 0.4s ease;
+}
+
+.sidebar ul li a:hover{
+  color:var(--black-color);
+  background:var(--white-color);
+}
+.sidebar ul li i{
+  font-size: 18px;
+  font-weight: 400;
+  height:50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+.sidebar .links_name{
+  font-size: 15px;
+  font-weight: 400;
+  opacity:0;
+  pointer-events: none;
+  transition:all 0.3s ease;
+}
+.sidebar.active .links_name{
+  transition:0s;
+  opacity:1;
+  pointer-events: auto;
+}
+.sidebar .content{
+  position:absolute;
+  color:var(--white-color);
+  bottom:0;
+  left:0;
+  width:100%;
+}
+.sidebar .content .user{
+  position:relative;
+  padding:10px 6px;
+  height:60px;
+  background: none;
+  transition:all 0.4s ease;
+}
+.sidebar.active .content .user{
+  background:var(--light-black);
+}
+.content .user .user_details{
+  display:flex;
+  align-items:center;
+  opacity:0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition:all 0.4s ease;
+}
+.sidebar.active .user .user_details{
+  opacity:1;
+  pointer-events: auto;
+}
+.content .user .user_details img{
+  height:45px;
+  width:45px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.name_job{
+  margin-left:10px;
+}
+ .user_details .name{
+  font-size: 15px;
+  font-weight: 400;
+}
+ .user_details .job{
+  font-size: 12px; 
+}
+ #log_out{
+  position:absolute;
+  bottom:5px;
+  left:50%;
+  transform:translateX(-50%);
+  min-width: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition:all 0.4s ease;
+}
+.sidebar.active .user #log_out{
+  left:80%;
+  background:none;
+}
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*font-family: 'Poppins', sans-serif;*/
+}
+#my{
+    font-size: 50px;
+    color:red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+  }
+  #clicking{
+    color:black;
+    font-family:cursive;
+    font-size :15px;
+    font-weight: bold;
+    padding-left :90px;
+    
+  }
+  #notesid{
+    font-size: 50px;
+    color:black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+  }
+  #clicking{
+    color:black;
+    font-family:cursive;
+    font-size :18px;
+    font-weight: bold;
+    padding-left :30px;
+    
+  }
+::selection{
+  color: #fff;
+  background: #618cf8;
+}
+.naslovv{
+    padding-top:50px;
+   padding-left:100px; 
+    margin:auto;
+
+}
+.ocjene{
+   /* padding-left: 60px;*/
+    height:auto;
+    display:flex;
+}
+
+.name{
+    height:35px;
+    width:320px;
+    margin-bottom: 5px;
+    text-align:center;
+    color: #a1a1a1;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display:block;
+   margin-left: 130px;
+   border:1px solid rgba(177, 175, 175, 0.864);
+}
+
+#items{
+    width:320px;
+    height: 35px;
+    margin-bottom: 5px;
+    text-align:center;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #618cf8;
+    margin-right: 13px;
+}
+#items-add1{
+  width:320px;
+  height: 35px;
+  margin-bottom: 5px;
+  text-align:center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #dcf861;
+}
+.final_ocjena{
+  height: auto;
+  padding-left: 100px;
+  padding-top: 30px;
+  margin-bottom:150px;
+  display:inline;
+  
+
+}
+#total{
+  font-size:25px;
+  font-family: cursive;
+  font-weight: bold;
+  display:inline;
+  margin-right:50px;
+}
+#total_grade{
+  font-family: cursive;
+  font-size: 40px;
+  font-weight: bold;
+  display: inline;
+  
+  border-radius: 100%;
+  background-color: #61f8f3;
+ 
+  display:inline;
+
+ 
+  text-align: center;
+  margin-right:100px;
+}
+#total_grade_uspjeh{
+  font-family: cursive;
+  font-size: 35px;
+  font-weight: bold;
+ 
+ 
+  display:inline;
+
+ 
+  text-align: center;
+}
+.uredi_predmet{
+  height:30px;
+  width:30px;
+  padding-left: 3px;
+  opacity: 0.2;
+  
+}
+.drzas-slike{
+flex-grow:1;
+
+}
+.calForm {
+  position: absolute; top:0; left: 0; z-index: 999;
+  width: 100vw; height: 100%; min-height: 100vh;
+   margin:0; border: 0;
+   padding-top:200px;
+   padding-left: 500px;
+  
+  background: rgba(0,0,0,0.5);
+  
+}
+.calForm:is([open]) {
+  display: flex; flex-wrap: wrap;
+  align-items: center; justify-content: center;
+}
+.calForm form {
+  position: relative;
+  width: 450px; padding: 15px;
+  border-radius: 10px;
+  background: #fff;
+}
+#evtClose {
+  position: absolute;
+  top: 0; right: 0;
+  padding: 10px;
+  color: #b12020;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.calForm h2 { margin: 0 0 15px 0; }
+.calForm label, .calForm input[type=text], .calForm textarea { width: 100%; }
+.calForm label {
+  color: #a1a1a1;
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.calForm input[type=text], .calForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  background: #f5f5f5;
+}
+.calForm textarea {
+  height: 100px;
+  resize: none;
+}
+.calForm input[type=button], .calForm input[type=submit] {
+  border: 0; padding: 10px; margin: 10px 2px 0 0;
+  color: #cb1818; background: var(--bg-color-c);
+  cursor: pointer;
+}
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap");
+.hop {
+  
+  font-family: "Luckiest Guy";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+ margin: 0;
+ font-size: 8em;
+ /*padding: 0;*/
+ padding-top: 15px;
+ color: white;
+ grid-area:naslov;
+ text-align: center;
+ align-self: center;
+ text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1), 0.05em -0.03em 0 rgba(0, 0, 0, 1), 0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1), -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+}
+.hop span #s {
+  transform: scale(0.9);
+  display: inline-block;
+}
+.hop span {
+ transform: scale(0.9);
+ display: inline-block;
+}
+.hop span:first-child {
+ animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+   color:rgb(221, 39, 39);
+}
+#s {
+  animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+  font-size: 1.5em;
+
+}
+.hop span:last-child {
+ animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+}
+@keyframes bop {
+ 0% {
+   transform: scale(0.9);
+}
+ 50%, 100% {
+   transform: scale(1);
+}
+}
+@keyframes bopB {
+ 0% {
+   transform: scale(0.9);
+}
+ 80%, 100% {
+   transform: scale(1) rotateZ(-3deg);
+}
+}
+#textlinka {
+  font-family: "Luckiest Guy";
+  font-weight: bold;
+  font-size: 25px;
+  color:red;
+
+}
+#ikonica {
+  width:50px;
+  height:50px;
+}
+/*oblacici*/ 
+
+
+.containera {
+  height: 100%;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+}
+.containera .viewBox {
+  width: 40%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+}
+.containera .viewBox .moon {
+  align-self: flex-end;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background: #d9ff1b9f;
+  position: relative;
+  border:1px solid black;
+}
+.containera .viewBox .moon:after, .containera .viewBox .moon:before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: #ececec;
+  position: absolute;
+  border-radius: 50%;
+  top: 20px;
+  left: 40px;
+  border:1px solid black;
+}
+.containera .viewBox .moon:before {
+  top: 40px;
+  left: 10px;
+  height: 14px;
+  width: 14px;
+  border:1px solid black;
+}
+.containera .viewBox .clouds {
+  position: relative;
+
+}
+.containera .viewBox .clouds svg {
+  width: 100px;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  animation: floatLeft 10s linear infinite;
+  
+}
+.containera .viewBox .clouds svg:nth-child(2) {
+  top: 40px;
+  width: 130px;
+  opacity: 0;
+  animation: floatLeft 12s linear infinite;
+  animation-delay: 1s;
+}
+.containera .viewBox .clouds svg:nth-child(3) {
+  animation: floatLeft 7s linear infinite;
+  top: 70px;
+  animation-delay: 3s;
+}
+.containera .viewBox .clouds svg:nth-child(4) {
+  width: 200px;
+  animation: floatLeft 14s linear infinite;
+  top: 10px;
+  animation-delay: 5s;
+}
+@keyframes floatLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+ }
+  10% {
+    opacity: .5;
+    transform: translateX(-10vh);
+ }
+  90% {
+    transform: translateX(-110vh);
+ }
+  99% {
+    opacity: 0;
+    transform: translateX(-120vh);
+ }
+  100% {
+    transform: translateX(-120vh);
+ }
+}
+.oblaci{ 
+
+  height: 70vh;
+  
+  margin: 0;
+  background: blue;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, white,white);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, white,white); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;/*
+  justify-content: center;
+  align-items: center;*/
+}
+.zvezdee{ 
+
+height:50px;
+width:50px;
+margin:5px;
+
+
+
+}
+.divovi{ 
+
+display: inline;
+  
+  
+  }

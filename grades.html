@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="grades.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body onload="submit();spasi();">
+    <div class="stranica">
+        <div class="header">
+           
+            <div id="slika1">
+                        <img src="logo2.png" id="slika">
+            </div>
+            <p class="hop"><span>MY</span><span id="s">S</span><span>CHOOL</span></p>
+       
+        
+        </div>
+        
+            </div>
+            <div class="sidebar">
+                <div class="logo_content">
+                  <div class="logo">
+                    <div class="logo_name">Welcome!</div>
+                  </div>
+                  <i class='bx bx-menu' id="btn"></i>
+                </div>
+                <ul class="nav_list">
+                  <li>
+                    <img src="zvezda.png" id="ikonica" alt="ikona">
+                  </li>
+                  <li>
+                   <a href="index.html">
+                    <i class='bx bx-home'></i>
+                    <span class="links_name">Home</span>
+                   </a>
+                   <span class="tooltip">Home</span>
+                 </li>
+                  <li>
+                    <a href="grades.html">
+                     <i class='bx bx-medal'></i>
+                     <span class="links_name">Grades</span>
+                    </a>
+                    <span class="tooltip">Grades</span>
+                  </li>
+                  <li>
+                   <a href="exams.html">
+                    <i class='bx bx-task'></i>
+                    <span class="links_name">Exams</span>
+                   </a>
+                   <span class="tooltip">Exams</span>
+                 </li>
+                 <li>
+                   <a href="notes.html">
+                    <i class='bx bx-note'></i>
+                    <span class="links_name">Notes</span>
+                   </a>
+                   <span class="tooltip">Notes</span>
+                 </li>
+                 <li>
+                   <a href="timetable.html">
+                    <i class='bx bx-calendar'></i>
+                    <span class="links_name">Timetable</span>
+                   </a>
+                   <span class="tooltip">Timetable</span>
+                 </li>
+               
+                  <li>
+			<a href="documents.php">
+			 <i class='bx bx-file'></i>
+			 <span class="links_name">My Documents</span>
+			</a>
+			<span class="tooltip">My Documents</span>
+		  </li>
+                </ul>
+              
+                  <div class="user">
+                   
+                   
+                  </div>
+                </div>
+                <div class="ocjene_stranica">
+                <div class="naslovv">
+                    <span id="my">My</span><span id="notesid">Grades</span>
+                    <br>
+                    <br>
+                    <span id="clicking">Add & edit your school subjects and grades</span>
+                  </div>
+                  <br>
+                 
+                  <br>
+                  <br>
+                  <div class="ocjene">
+                    <div class="row">
+                        <div class="columns large-12">
+                          
+                          
+                          <form id="new_input" class="new_input" action="#" method="put">
+                            <p class="row" style="color:red;font-size:45px;padding-left:200px;padding-bottom:5px;font-family:'Luckiest Guy';font-weight: bold;padding-top: 0px;margin-top: 0px;">SUBJECTS</p>
+                            <div class="row">
+                              <div class="columns small-4">
+                                <div  class="name" id="name1" name="name1" >Subject name</div>
+                              </div>
+                              <a onclick= "openDiv()" class="drzas-slike" href="#">
+                                <img class="uredi_predmet" alt="ikonica" src="edit_predmet2.png">
+                                </a>
+                            </div>
+                            <div class="row">
+                              <div class="columns small-4">
+                                <div class="name" name="name2" id="name2">Subject name</div>
+                                
+                              </div>
+                              <a onclick= "openDiv2()" class="drzas-slike" href="#">
+                              <img class="uredi_predmet" alt="ikonica" src="edit_predmet2.png">
+                              </a>
+                              
+                            </div>
+                            <div class="row">
+                                <div class="columns small-4">
+                                  <div class="name" name="name2" id="name3" >Subject name</div>
+                                </div>
+                                <a onclick="openDiv3()" class="drzas-slike" href="#">
+                                  <img class="uredi_predmet" alt="ikonica" src="edit_predmet2.png">
+                                  </a>
+                              </div>
+                              <div class="row">
+                                <div class="columns small-4">
+                                  <div class="name" name="name2" id="name4" >Subject name</div>
+                                </div>
+                                <a onclick="openDiv4()" class="drzas-slike" href="#">
+                                  <img class="uredi_predmet" alt="ikonica" src="edit_predmet2.png">
+                                  </a>
+                              </div>
+                              <div class="row">
+                                <div class="columns small-4">
+                                  <div class="name" name="name2" id="name5" >Subject name</div>
+                                </div>
+                                <a onclick="openDiv5()" class="drzas-slike" href="#">
+                                  <img class="uredi_predmet" alt="ikonica" src="edit_predmet2.png">
+                                  </a>
+                              </div>
+                              <div class="row">
+                                <div class="columns small-4">
+                                  <div class="name" name="name2" id="name6" >Subject name</div>
+                                </div>
+                                <a onclick="openDiv6()" class="drzas-slike" href="#">
+                                  <img class="uredi_predmet" alt="ikonica" src="edit_predmet2.png">
+                                  </a>
+                              </div>
+                              <div class="row">
+                                <div class="columns small-4">
+                                  <div class="name" name="name2" id="name7" >Subject name</div>
+                                </div>
+                                <a onclick="openDiv7()" class="drzas-slike" href="#">
+                                  <img class="uredi_predmet" alt="ikonica" src="edit_predmet2.png">
+                                  </a>
+                              </div>
+                              <div class="row">
+                                <div class="columns small-4">
+                                  <div class="name" name="name2" id="name8" >Subject name</div>
+                                </div>
+                                <a onclick="openDiv8()"  class="drzas-slike" href="#">
+                                  <img class="uredi_predmet" alt="ikonica" src="edit_predmet2.png">
+                                  </a>
+                              </div>
+                              <div class="row">
+                                <div class="columns small-4">
+                                  <div class="name" name="name2" id="name9" >Subject name</div>
+                                </div>
+                                <a onclick="openDiv9()" class="drzas-slike" href="#">
+                                  <img class="uredi_predmet" alt="ikonica" src="edit_predmet2.png">
+                                  </a>
+                              </div>
+                              <div class="row">
+                                <div class="columns small-4">
+                                  <div class="name" name="name2" id="name10" >Subject name</div>
+                                </div>
+                                <a onclick="openDiv10()" class="drzas-slike" href="#">
+                                  <img class="uredi_predmet" alt="ikonica" src="edit_predmet2.png">
+                                  </a>
+                              </div>
+                              <div class="row">
+                                <div class="columns small-4">
+                                  <div class="name" name="name2" id="name11" >Subject name</div>
+                                </div>
+                                <a onclick="openDiv11()"  class="drzas-slike" href="#">
+                                  <img class="uredi_predmet" alt="ikonica" src="edit_predmet2.png">
+                                  </a>
+                              </div>
+                              <div class="row">
+                                <div class="columns small-4">
+                                  <div class="name" name="name2" id="name12" >Subject name</div>
+                                </div>
+                                <a onclick="openDiv12()"  class="drzas-slike" href="#">
+                                  <img class="uredi_predmet" alt="ikonica" src="edit_predmet2.png">
+                                  </a>
+                              </div>
+                              <div class="row">
+                                <div class="columns small-4">
+                                  <div class="name" name="name2" id="name13" >Subject name</div>
+                                </div>
+                                <a onclick="openDiv13()"  class="drzas-slike" href="#">
+                                  <img class="uredi_predmet" alt="ikonica" src="edit_predmet2.png">
+                                  </a>
+                              </div>
+                              <div class="row">
+                                <div class="columns small-4">
+                                  <div class="name" name="name2" id="name14" >Subject name</div>
+                                </div>
+                                <a onclick="openDiv14()" class="drzas-slike" href="#">
+                                  <img class="uredi_predmet" alt="ikonica" src="edit_predmet2.png">
+                                  </a>
+                              </div>
+                              <div class="row">
+                                <div class="columns small-4">
+                                  <div class="name" name="name2" id="name15" >Subject name</div>
+                                </div>
+                                <a onclick="openDiv15()" class="drzas-slike" href="#">
+                                  <img class="uredi_predmet" alt="ikonica" src="edit_predmet2.png">
+                                  </a>
+                              </div>
+                              
+                          </form>  
+                        </div>
+                      </div>
+
+
+                      <div class="unos_ocjena">
+
+                        <div class="wrapper_" >
+
+	
+
+                          <p class="ocjene_po" style="color:rgb(43, 5, 138);font-size:45px;padding-left:30px;padding-bottom:13px;font-family:'Luckiest Guy';font-weight: bold;padding-top: 0px;margin-top: 0px; margin-bottom:26px;">GRADES</p>
+                        
+                          <input id="yourgrades"  class="ocjene_po" placeholder="Grade,grade,.." type="text" name="ime"  />
+                          
+                          <input id="yourgrades1" class="ocjene_po" placeholder="Grade,grade,.." type="text" name="ime2" />
+                         
+                          <input id="yourgrades2" class="ocjene_po" placeholder="Grade,grade,.." type="text" name="ime3" />
+                          <input id="yourgrades3" class="ocjene_po" placeholder="Grade,grade,.." type="text" name="ime4"/>
+                          <input id="yourgrades4" class="ocjene_po" placeholder="Grade,grade,.." type="text" name="ime5" />
+                          <input id="yourgrades5" class="ocjene_po" placeholder="Grade,grade,.." type="text" name="ime6" />
+                          <input id="yourgrades6" class="ocjene_po" placeholder="Grade,grade,.." type="text" name="ime7" />
+                          <input id="yourgrades7" class="ocjene_po" placeholder="Grade,grade,.." type="text" name="ime8" />
+                          <input id="yourgrades8" class="ocjene_po" placeholder="Grade,grade,.." type="text" name="ime9"/>
+                          <input id="yourgrades9" class="ocjene_po" placeholder="Grade,grade,.." type="text" name="ime10" />
+                          <input id="yourgrades10" class="ocjene_po" placeholder="Grade,grade,.." type="text" name="ime11"/>
+                          <input id="yourgrades11" class="ocjene_po" placeholder="Grade,grade,.." type="text" name="ime12" />
+                          <input id="yourgrades12" class="ocjene_po" placeholder="Grade,grade,.." type="text" name="ime13"/>
+                          <input id="yourgrades13" class="ocjene_po" placeholder="Grade,grade,.." type="text" name="ime14"/>
+                          <input id="yourgrades14" class="ocjene_po" placeholder="Grade,grade,.." type="text" name="ime15"/>
+                          <div id="drugi">
+
+                          </div>
+                          
+                        </div>
+
+                        
+
+
+
+                      </div>
+                      <div class="prosjek" >
+                      <div class="svi_prosjeci" id="noviprosjek">
+                        <div id="avg_grades"></div>
+                        <div id="avg_grades1"></div>
+                        <div id="avg_grades2"></div>
+                        <div id="avg_grades3"></div>
+                        <div id="avg_grades4"></div>
+                        <div id="avg_grades5"></div>
+                        <div id="avg_grades6"></div>
+                        <div id="avg_grades7"></div>
+                        <div id="avg_grades8"></div>
+                        <div id="avg_grades9"></div>
+                        <div id="avg_grades10"></div>
+                        <div id="avg_grades11"></div>
+                        <div id="avg_grades12"></div>
+                        <div id="avg_grades13"></div>
+                        <div id="avg_grades14"></div>
+                      </div>
+                      <div class="uspjeh" id="noviuspjeh">
+
+                        <div id="final_grade"></div>
+                        <div id="final_grade1"></div>
+                        <div id="final_grade2"></div>
+                        <div id="final_grade3"></div>
+                        <div id="final_grade4"></div>
+                        <div id="final_grade5"></div>
+                        <div id="final_grade6"></div>
+                        <div id="final_grade7"></div>
+                        <div id="final_grade8"></div>
+                        <div id="final_grade9"></div>
+                        <div id="final_grade10"></div>
+                        <div id="final_grade11"></div>
+                        <div id="final_grade12"></div>
+                        <div id="final_grade13"></div>
+                        <div id="final_grade14"></div>
+                      
+
+
+                      </div>
+
+
+                      </div>
+
+                          
+
+
+
+
+
+
+
+
+                  </div>
+                  <!--<div class="final_ocjena">
+                    <span id="total">Total Grade:</span>
+                       <div id="total_grade"></div>
+                       <div id="total_grade_uspjeh"></div>
+
+                       
+                        
+        
+        
+                       
+
+
+
+
+
+
+               </div>-->
+             
+                </div>
+                <div class="oblaci">
+
+
+                  <div class="final_ocjena">
+                    <span id="total">Total Grade:</span>
+                    
+                       <div id="total_grade"></div>
+                   
+                       <div id="total_grade_uspjeh"></div>
+                       <div style="margin-left: 55px; display: inline;">
+                       <div class="divovi" id="prva_zvezda"><img class="zvezdee"src="zvezda.png" alt="zvezda"></div>
+                       <div class="divovi" id="druga_zvezda"><img class="zvezdee" src="zvezda.png" alt="zvezda"></div>
+                       <div class="divovi" id="treca_zvezda"><img class="zvezdee" src="zvezda.png" alt="zvezda"></div>
+                       <div class="divovi" id="cetvrta_zvezda"><img class="zvezdee" src="zvezda.png" alt="zvezda"></div>
+                       <div class="divovi" id="peta_zvezda"><img class="zvezdee" src="zvezda.png" alt="zvezda"></div>
+                      </div>
+                  </div>
+                <div class="containera">
+                  <div class="viewBox">
+                  
+  
+                         
+                          
+          
+          
+                         
+  
+  
+  
+  
+  
+  
+                 
+                    <!--<div class="moon"></div>-->
+                    <div class="clouds">
+                      <svg viewBox="0 0 463.83425 400" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="m375.835938 112.957031c-5.851563 0-11.691407.582031-17.425782 1.742188-4.324218-21.582031-18.304687-39.992188-37.933594-49.957031-19.625-9.964844-42.738281-10.382813-62.714843-1.136719-18.078125-49.796875-73.101563-75.507813-122.898438-57.429688s-75.507812 73.105469-57.429687 122.898438c-43.621094 1.378906-78.078125 37.484375-77.4257815 81.121093.6562495 43.640626 36.1835935 78.691407 79.8281255 78.761719h296c48.597656 0 88-39.398437 88-88 0-48.601562-39.402344-88-88-88zm0 0" fill="blue"/></svg><svg viewBox="0 0 463.83425 400" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="m375.835938 112.957031c-5.851563 0-11.691407.582031-17.425782 1.742188-4.324218-21.582031-18.304687-39.992188-37.933594-49.957031-19.625-9.964844-42.738281-10.382813-62.714843-1.136719-18.078125-49.796875-73.101563-75.507813-122.898438-57.429688s-75.507812 73.105469-57.429687 122.898438c-43.621094 1.378906-78.078125 37.484375-77.4257815 81.121093.6562495 43.640626 36.1835935 78.691407 79.8281255 78.761719h296c48.597656 0 88-39.398437 88-88 0-48.601562-39.402344-88-88-88zm0 0" fill="blue"/></svg><svg viewBox="0 0 463.83425 400" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="m375.835938 112.957031c-5.851563 0-11.691407.582031-17.425782 1.742188-4.324218-21.582031-18.304687-39.992188-37.933594-49.957031-19.625-9.964844-42.738281-10.382813-62.714843-1.136719-18.078125-49.796875-73.101563-75.507813-122.898438-57.429688s-75.507812 73.105469-57.429687 122.898438c-43.621094 1.378906-78.078125 37.484375-77.4257815 81.121093.6562495 43.640626 36.1835935 78.691407 79.8281255 78.761719h296c48.597656 0 88-39.398437 88-88 0-48.601562-39.402344-88-88-88zm0 0" fill="blue"/></svg><svg viewBox="0 0 463.83425 400" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="m375.835938 112.957031c-5.851563 0-11.691407.582031-17.425782 1.742188-4.324218-21.582031-18.304687-39.992188-37.933594-49.957031-19.625-9.964844-42.738281-10.382813-62.714843-1.136719-18.078125-49.796875-73.101563-75.507813-122.898438-57.429688s-75.507812 73.105469-57.429687 122.898438c-43.621094 1.378906-78.078125 37.484375-77.4257815 81.121093.6562495 43.640626 36.1835935 78.691407 79.8281255 78.761719h296c48.597656 0 88-39.398437 88-88 0-48.601562-39.402344-88-88-88zm0 0" fill="blue"/></svg>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <dialog class="calForm"id="calForm1"><form method="dialog">
+                  <div onclick= "closeDiv()" id="evtClose">X</div>
+                  <h2>New Subject</h2>
+                  
+                  <label>Name</label>
+                  <textarea id="evtTxt" required></textarea>
+            
+                  <input  id="evtSave" type="submit" value="Save">
+                </form></dialog>
+
+                <dialog class="calForm"id="calForm2"><form method="dialog">
+                  <div onclick= "closeDiv2()" id="evtClose2">X</div>
+                  <h2>New Subject</h2>
+                  
+                  <label>Name</label>
+                  <textarea id="evtTxt2" required></textarea>
+            
+                  
+                  <input id="evtSave2" type="submit" value="Save">
+                </form></dialog>
+
+                <dialog class="calForm"id="calForm3"><form method="dialog">
+                  <div onclick= "closeDiv3()" id="evtClose3">X</div>
+                  <h2>New Subject</h2>
+                  
+                  <label>Name</label>
+                  <textarea id="evtTxt3" required></textarea>
+            
+                  
+                  <input id="evtSave3" type="submit" value="Save">
+                </form></dialog>
+                <dialog class="calForm"id="calForm4"><form method="dialog">
+                  <div onclick= "closeDiv4()" id="evtClose4">X</div>
+                  <h2>New Subject</h2>
+                  
+                  <label>Name</label>
+                  <textarea id="evtTxt4" required></textarea>
+            
+                  
+                  <input id="evtSave4" type="submit" value="Save">
+                </form></dialog>
+                <dialog class="calForm"id="calForm5"><form method="dialog">
+                  <div onclick= "closeDiv5()" id="evtClose5">X</div>
+                  <h2>New Subject</h2>
+                  
+                  <label>Name</label>
+                  <textarea id="evtTxt5" required></textarea>
+            
+                  
+                  <input id="evtSave5" type="submit" value="Save">
+                </form></dialog>
+                <dialog class="calForm"id="calForm6"><form method="dialog">
+                  <div onclick= "closeDiv6()" id="evtClose6">X</div>
+                  <h2>New Subject</h2>
+                  
+                  <label>Name</label>
+                  <textarea id="evtTxt6" required></textarea>
+            
+                  
+                  <input id="evtSave6" type="submit" value="Save">
+                </form></dialog>
+                <dialog class="calForm"id="calForm7"><form method="dialog">
+                  <div onclick= "closeDiv7()" id="evtClose7">X</div>
+                  <h2>New Subject</h2>
+                  
+                  <label>Name</label>
+                  <textarea id="evtTxt7" required></textarea>
+            
+                  
+                  <input id="evtSave7" type="submit" value="Save">
+                </form></dialog>
+                <dialog class="calForm"id="calForm8"><form method="dialog">
+                  <div onclick= "closeDiv8()" id="evtClose8">X</div>
+                  <h2>New Subject</h2>
+                  
+                  <label>Name</label>
+                  <textarea id="evtTxt8" required></textarea>
+            
+                  
+                  <input id="evtSave8" type="submit" value="Save">
+                </form></dialog>
+                <dialog class="calForm"id="calForm9"><form method="dialog">
+                  <div onclick= "closeDiv9()" id="evtClose9">X</div>
+                  <h2>New Subject</h2>
+                  
+                  <label>Name</label>
+                  <textarea id="evtTxt9" required></textarea>
+            
+                  
+                  <input id="evtSave9" type="submit" value="Save">
+                </form></dialog>
+                <dialog class="calForm"id="calForm10"><form method="dialog">
+                  <div onclick= "closeDiv10()" id="evtClose10">X</div>
+                  <h2>New Subject</h2>
+                  
+                  <label>Name</label>
+                  <textarea id="evtTxt10" required></textarea>
+            
+                  
+                  <input id="evtSave10" type="submit" value="Save">
+                </form></dialog>
+                <dialog class="calForm"id="calForm11"><form method="dialog">
+                  <div onclick= "closeDiv11()" id="evtClose11">X</div>
+                  <h2>New Subject</h2>
+                  
+                  <label>Name</label>
+                  <textarea id="evtTxt11" required></textarea>
+            
+                  
+                  <input id="evtSave11" type="submit" value="Save">
+                </form></dialog>
+                <dialog class="calForm"id="calForm12"><form method="dialog">
+                  <div onclick= "closeDiv12()" id="evtClose12">X</div>
+                  <h2>New Subject</h2>
+                  
+                  <label>Name</label>
+                  <textarea id="evtTxt12" required></textarea>
+            
+                  
+                  <input id="evtSave12" type="submit" value="Save">
+                </form></dialog>
+                <dialog class="calForm"id="calForm13"><form method="dialog">
+                  <div onclick= "closeDiv13()" id="evtClose13">X</div>
+                  <h2>New Subject</h2>
+                  
+                  <label>Name</label>
+                  <textarea id="evtTxt13" required></textarea>
+            
+                  
+                  <input id="evtSave13" type="submit" value="Save">
+                </form></dialog>
+                <dialog class="calForm"id="calForm14"><form method="dialog">
+                  <div onclick= "closeDiv14()" id="evtClose14">X</div>
+                  <h2>New Subject</h2>
+                  
+                  <label>Name</label>
+                  <textarea id="evtTxt14" required></textarea>
+            
+                  
+                  <input id="evtSave14" type="submit" value="Save">
+                </form></dialog>
+                <dialog class="calForm"id="calForm15"><form method="dialog">
+                  <div onclick= "closeDiv15()" id="evtClose15">X</div>
+                  <h2>New Subject</h2>
+                  
+                  <label>Name</label>
+                  <textarea id="evtTxt15" required></textarea>
+            
+                  
+                  <input id="evtSave15" type="submit" value="Save">
+                </form></dialog>
+
+</body>
+<script  src="grades.js"></script>
+</html>
